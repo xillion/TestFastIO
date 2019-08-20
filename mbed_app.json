@@ -1,0 +1,56 @@
+{
+    "macros":
+    [
+        "CELLULAR_DEVICE=UBLOX_PPP",
+        "MDMRXD=PA_10",
+        "MDMTXD=PA_9",
+        "MDMRTS=PB_3",
+        "MDMCTS=PB_4"
+    ],
+    "config": {
+        "sock-type": "TCP",
+        "sim-pin-code": {
+            "help": "SIM PIN code",
+            "value": 0
+        },
+        "apn": {
+            "help": "The APN string to use for this SIM/network, set to 0 if none",
+            "value": "\"internet.beeline.ru\""
+        },
+        "username": {
+            "help": "The user name string to use for this APN, set to zero if none",
+            "value": "\"beeline\""
+        },
+        "password": {
+            "help": "The password string to use for this APN, set to 0 if none",
+            "value": "\"beeline\""
+        },
+        "echo-server-hostname": {
+            "help": "Echo server host name.",
+            "value": "\"echo.mbedcloudtesting.com\""
+        },
+        "echo-server-port": {
+            "help": "Echo server port number.",
+            "value": 7
+        }
+  },
+    "target_overrides": {
+        "*": {
+            "target.network-default-interface-type": "CELLULAR",
+            "lwip.ipv4-enabled": true,
+            "lwip.ethernet-enabled": false,
+            "lwip.ppp-enabled": true,
+            "lwip.tcp-enabled": true,
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 115200,
+            "platform.default-serial-baud-rate": 115200,
+            "platform.stdio-buffered-serial": true,
+            "cellular.debug-at": true,
+            "nsapi.default-cellular-plmn": 0,
+            "nsapi.default-cellular-sim-pin": 0,
+            "nsapi.default-cellular-apn": "\"internet.beeline.ru\"",
+            "nsapi.default-cellular-username": "\"beeline\"",
+            "nsapi.default-cellular-password": "\"beeline\""
+        }
+    }
+}
