@@ -1,11 +1,7 @@
 {
     "macros":
     [
-        "CELLULAR_DEVICE=UBLOX_PPP",
-        "MDMRXD=PA_10",
-        "MDMTXD=PA_9",
-        "MDMRTS=PB_3",
-        "MDMCTS=PB_4"
+        "CELLULAR_DEVICE=UBLOX_PPP"
     ],
     "config": {
         "sock-type": "TCP",
