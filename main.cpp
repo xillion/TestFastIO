@@ -4,9 +4,6 @@
 #include <string>
 
 
-
-#define BUS_READ_CONST 10
-
 // json strings
 const char status[] = "{\"name\":\"state\",\"sensors\":[0,0,0],\"id\":0,\"time\":0,\"hash\":0}";
 const char transaction[] = "{\"name\":\"transaction\",\"item\":0,\"id\":0,\"time\":0,\"hash\":0}";

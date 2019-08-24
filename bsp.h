@@ -1,4 +1,6 @@
 
+#ifndef BSP_H
+#define BSP_H
 
 #include "mbed.h"
 #include "FastIO/FastIO.h"
@@ -8,7 +10,6 @@
 */
 #define COLLECT_LED     PC_2
 #define CHARGE_LED      PC_1
-#define LED1            CHARGE_LED
 #define COLLECT_BTN     PC_3
 #define CHARGE_BTN      PC_0
 
@@ -24,3 +25,8 @@
 #define sell_counter    PC_11
 #define item_selector0  PA_0
 #define item_selector1  PC_12
+
+
+#define BUS_READ_CONST 10
+
+#endif
